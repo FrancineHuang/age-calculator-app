@@ -5,33 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
   
   <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Day
-  DD
+  <main>
+    <div class="main-container">
+      <!-- Input container -->
+      <div class="upper-container">
+        <div class="data-container">
 
-  Month
-  MM
+          <div class="day-block">
+            <p class="time-input">Day</p>
+            <input id="day-input" type="text" placeholder="DD">
+            <p id="day-error" class="error-active">Must be a valid day.</p>
+          </div>
 
-  Year
-  YYYY
+          <div class="month-block">
+            <p class="time-input">Month</p>
+            <input id="month-input" type="text" placeholder="MM">
+            <p id="month-error" class="error-active">Must be a valid month.</p>
+          </div>
 
-  -- years
-  -- months
-  -- days
+          <div class="year-block">
+            <p class="time-input">Year</p>
+            <input id="year-input" type="text" placeholder="YYYY">
+            <p id="year-error" class="error-active">Must be a valid year.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider">
+        <hr>
+        <button id="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+      </div>
+
+      <!-- Result -->
+      <div class="result-container">
+        <div class="years-result"><span id="years-result">--</span> years</div>
+        <div class="months-result"><span id="months-result">--</span> months</div>
+        <div class="days-result"><span id="days-result">--</span> days</div>
+      </div>
+
+    </div>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
